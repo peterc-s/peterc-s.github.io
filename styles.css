@@ -1,0 +1,112 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #31363f;
+    margin: 0;
+    padding: 0;
+}
+
+body *:not(a):not(button):not(input):not(textarea):not(select) {
+    color: #eeeeee;
+}
+
+a {
+    color: #76ABAE;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:before {
+    content: "-> ";
+    color: #76ABAE;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.profile {
+    width: 100%;
+    height: auto;
+    border: 2px solid #737373;
+}
+
+/* desktop */
+@media (min-width: 800px) {
+    .profile {
+        width: 20vw;
+        float: left;
+        margin-right: 1cm;
+    }
+}
+
+/* mobile */
+@media (max-width: 799px) {
+    .profile {
+        display: block;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #222831;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+.navbar-items {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-items h2 {
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.navbar hr {
+    width: 100%;
+    color: #737373;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-items a {
+    float: left;
+    text-align: left;
+    padding: 1em 0.7em;
+    text-decoration: none;
+}
+
+.content {
+    padding: 20px;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+}
+
+.project-title h2 {
+    float: left;
+    padding-right: 0.5em;
+}
+
+.project-title p {
+    float: left;
+    padding-right: 0.5em;
+}

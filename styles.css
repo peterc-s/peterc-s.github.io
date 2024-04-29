@@ -31,28 +31,24 @@ img {
     height: auto;
 }
 
-.profile {
+.image-project {
     width: 100%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid #737373;
 }
 
-/* desktop */
 @media (min-width: 800px) {
-    .profile {
-        width: 20vw;
-        float: left;
-        margin-right: 1cm;
+    .image-project {
+        width: 40vw;
     }
 }
 
-/* mobile */
 @media (max-width: 799px) {
-    .profile {
+    .image-project {
         display: block;
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 60%;
     }
 }
 

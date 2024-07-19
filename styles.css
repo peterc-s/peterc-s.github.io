@@ -26,6 +26,14 @@ ul li:before {
     color: #76ABAE;
 }
 
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #1f293a;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+
 img {
     width: 100%;
     height: auto;

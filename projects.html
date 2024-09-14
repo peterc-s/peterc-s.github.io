@@ -21,7 +21,28 @@
 
     <div id="main" style="margin:1vw">
         <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/zig-http" target="_blank">HTTP server in Zig</a></h2>
+            <h2><a href="https://github.com/peterc-s/bf-interpreter" target="_blank">Brainfuck Interpreter</a></h2>
+            <p><i>2024-present</i></p>
+        </div>
+
+        <p>After being nerd-sniped by a by a tweet, I went about writing an interpreter for the
+        esoteric programming language <a href="https://en.wikipedia.org/wiki/Brainfuck" target="_blank">Brainfuck</a>.
+        I decided to use C and currently it is built with the Zig build system.
+        </p>
+
+        <p>It implements all of the instructions so far but still needs some work. Memory is dynamically
+        allocated, so if the data pointer attempts to move out of the currently allocated region of data,
+        memory will be reallocated to accomodate.
+        </p>
+
+        <center>
+            <a href="/img/bf-hello-world.png">
+                <img src="/img/bf-hello-world.png" alt="A screenshot showing the Hello, World! program written in Brainfuck being interpreted correctly." class="image-project"></img>
+            </a>
+        </center>
+
+        <div class="project-title">
+            <h2><a href="https://github.com/peterc-s/zig-http" target="_blank">HTTP Server in Zig</a></h2>
             <p><i>2024-present</i></p>
         </div>
 

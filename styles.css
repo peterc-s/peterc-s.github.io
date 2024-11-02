@@ -49,14 +49,16 @@ img {
 
 @media (min-width: 800px) {
     .image-project {
-        width: 40vw;
+        max-width: 90%;
+        width: 60em;
     }
 }
 
 @media (max-width: 799px) {
     .image-project {
         display: block;
-        width: 60%;
+        max-width: 90%;
+        width: 60em;
     }
 }
 

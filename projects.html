@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter C-S - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-items">
+            <h2>Peter C-S</h2>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </div>
+        <hr>
+    </div>
+
+    <div id="main" style="margin:1vw">
+        <div class="project-title">
+            <h2><a href="https://github.com/peterc-s/tereminder" target="_blank">Tereminder</a></h2>
+            <p><i>2024-present</i></p>
+        </div>
+
+        <p>Reminders for the terminal, written in C. Mostly complete, still need to implement
+        recurring reminders and a way to create, delete, and modify reminders without manually
+        modifying the <code>.reminders</code> file that stores reminders.
+        </p>
+
+        <center>
+            <a href="/img/tereminder-1.png">
+                <img src="/img/tereminder-1.png" alt="A screenshot showing the tereminder software with three reminders that have time until due, severity/importance, a title, and a description." class="image-project"></img>
+            </a>
+        </center>
+
+        <div class="project-title">
+            <h2><a href="https://github.com/peterc-s/gm-lyric-quiz" target="_blank">George Michael Lyric Quiz</a></h2>
+            <p><i>2024</i></p>
+        </div>
+
+        <p>As a christmas gift for someone special, I decided to write up a little game
+        with their favourite artist's lyrics. It's written purely in C and uses <a href="https://github.com/nicbarker/clay" target="_blank">Clay</a>
+        for layouting and <a href="https://github.com/raysan5/raylib" target="_blank">raylib</a>
+        for rendering.
+        </p>
+
+        <center>
+            <a href="/img/gm-lyric-quiz.png">
+                <img src="/img/gm-lyric-quiz.png" alt="An image showing the graphical user interface for the George Michael lyric quiz application. It shows the lyrics for Precious Box with 65 words redacted and has an input box to guess the missing words." class="image-project"></img>
+            </a>
+        </center>
+
+        <div class="project-title">
+            <h2><a href="https://github.com/peterc-s/bf-interpreter" target="_blank">Brainfuck Interpreter</a></h2>
+            <p><i>2024</i></p>
+        </div>
+
+        <p>After being nerd-sniped by a by a tweet, I went about writing an interpreter for the
+        esoteric programming language <a href="https://en.wikipedia.org/wiki/Brainfuck" target="_blank">Brainfuck</a>.
+        I decided to use C and currently it can be built with the Zig build system or GNU Make with GCC.
+        </p>
+
+        <p>Memory is dynamically allocated, so if the data pointer attempts to move out of the currently allocated region of data,
+        memory will be reallocated to accomodate.
+        </p>
+
+        <center>
+            <a href="/img/bf-hello-world.png">
+                <img src="/img/bf-hello-world.png" alt="A screenshot showing the Hello, World! program written in Brainfuck being interpreted correctly." class="image-project"></img>
+            </a>
+        </center>
+
+        <p>After a while of no luck debugging, I finally fixed an issue that meant the interpreter was
+        skipping past more <code>]</code> instructions than it should have. So here's some cool
+        programs running:
+        </p>
+
+        <center>
+            <a href="/img/bf-complex-examples.png">
+                <img src="/img/bf-complex-examples.png" alt="A screenshot showing a brainfuck ROT13 working on the interpreter and a Fibonacci sequence working on the interpreter." class="image-project"></img>
+            </a>
+        </center>
+
+        <div class="project-title">
+            <h2><a href="https://github.com/peterc-s/zig-http" target="_blank">HTTP Server in Zig</a></h2>
+            <p><i>2024</i></p>
+        </div>
+
+        <p>In an attempt to learn the Zig programming language, I decided to create a basic HTTP server.
+        </p>
+        
+        <p>It currently only crudely implements the <code>GET</code> method, but I've been able to locally host
+        this website with it!
+        </p>
+
+        <center>
+            <a href="/img/zig-http.png">
+                <img src="/img/zig-http.png" alt="A screenshot showing the http server I wrote locally hosting this website." class="image-project"></img>
+            </a>
+        </center>
+
+        <div class="project-title">
+            <h2><a href="https://github.com/peterc-s/oxalis" target="_blank">Oxalis</a></h2>
+            <p><i>2024-present</i></p>
+        </div>
+
+        <p>Oxalis (named after a flower affected by the rust fungi) is [going to be] a real-time
+        renderer written in Rust. This is a project I'm doing alongside a
+        <a href="https://github.com/ThomasMTurner" target="_blank">friend</a>.
+        </p>
+
+        <h3>2024-04-23 - A Triangle!</h3>
+        <p>After following the <a href="https://vulkan-tutorial.com/" target="_blank">Vulkan tutorial</a>
+        I now have a hard-coded triangle written using the <a href="https://github.com/ash-rs/ash" target="_blank">
+        ash</a> Vulkan bindings for Rust, some glsl, and some utility functions and help from
+        <a href="https://github.com/KyleMayes/vulkanalia/" target="_blank">vulkanalia</a>.
+        <center>
+            <a href="/img/first-triangle.png">
+                <img src="/img/first-triangle.png" alt="A single triangle with colourful shading, known as the 'hello triangle' in graphics." class="image-project"></img>
+            </a>
+        </center>
+        </p>
+
+        <h3>2024-06-11 - Rewrite</h3>
+        <p>I wasn't sure on the structure of the first attempt and so began a rewrite, though I might
+        sideline this project for a while.
+        </p>
+        
+        <div class="project-title">
+            <h2><a href="https://github.com/peterc-s/frontier" target="_blank">Frontier</a></h2>
+            <p><i>2024-present</i></p>
+        </div>
+        <p>Frontier is a small Rust command line tool for ease of reproducing installations. It is
+        still WIP, but currently supports generating a configuration file that lists all user installed
+        packages which can then be installed using Frontier.
+        </p>
+    </div>
+
+</body>
+
+</html>

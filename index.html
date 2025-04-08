@@ -11,16 +11,20 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-items">
             <h2>Peter C-S</h2>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+            </nav>
         </div>
         <hr>
     </div>
 
-    <div id="main" style="margin:1vw">
+    <main id="main" style="margin:1vw">
+        <h1 class="sr-only">Peter C-S About</h1>
         <h2>About</h2>
         <p>I'm Pete(r)? <sup>[he/they]</sup>, a second year computer science student.
         </p>
@@ -38,7 +42,7 @@
         <h2>Tech Tree</h2>
         <h3>Certs</h3>
         <ul>
-            <li> [WIP] <a href="https://certifications.tcm-sec.com/pjpt/" target="_blank">PJPT</a>
+            <li> [WIP] <a href="https://certifications.tcm-sec.com/pjpt/" target="_blank" rel="noopener noreferrer">PJPT<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span></a>
         </ul>
         <h3>Languages</h3>
         <p>In no particular order, here are some of the languages I've used / am using:</p>
@@ -74,28 +78,28 @@
 
         <h3>Operating Systems</h3>
         <ul>
-            <li> Linux (Arch, Debian, Nix) [<a href="https://github.com/peterc-s/dotfiles" target="_blank">dotfiles</a>]
+            <li> Linux (Arch, Debian, Nix) [<a href="https://github.com/peterc-s/dotfiles" target="_blank" rel="noopener noreferrer">dotfiles<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span></a>]
             <li> Windows (mostly 10)
         </ul>
 
         <hr>
 
         <h3>Find Me Elsewhere</h3>
-        <a href="https://www.linkedin.com/in/peter-chaplin-smith-087844213/" target="_blank">
+        <a href="https://www.linkedin.com/in/peter-chaplin-smith-087844213/" target="_blank" rel="noopener noreferrer">
             <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge"
-                style="height:1cm; width:auto;" alt="linkedin" />
+                style="height:1cm; width:auto;" alt="Visit my LinkedIn"/>
         </a>
         <span style="padding: 0.5cm;" />
-        <a href="https://github.com/peterc-s/" target="_blank">
-            <img src="img/github-mark.svg" alt="GitHub" style="height: 1cm; width: auto;"/>
+        <a href="https://github.com/peterc-s/" target="_blank" rel="noopener noreferrer">
+            <img src="img/github-mark.svg" alt="Visit my GitHub" style="height: 1cm; width: auto;"/>
         </a>
 
         <h3>Contact Me</h3>
         <h4>Email</h4>
         <p>Personal: <a href="mailto:petercs@purelymail.com">petercs@purelymail.com</a></p>
         <h4>PGP</h4>
-        <p>You can find my public key on my GitHub <a href="https://github.com/peterc-s/peterc-s/blob/main/pgpkey.asc" target="_blank">here</a>.</p>
-    </div>
+        <p>You can find my public key on my GitHub <a href="https://github.com/peterc-s/peterc-s/blob/main/pgpkey.asc" target="_blank" rel="noopener noreferrer">here<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span></a>.</p>
+    </main>
 </body>
 
 </html>

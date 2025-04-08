@@ -10,184 +10,256 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-items">
             <h2>Peter C-S</h2>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+            </nav>
         </div>
         <hr>
     </div>
 
-    <div id="main" style="margin:1vw">
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/rustrace" target="_blank">Rustrace</a></h2>
-            <p><i>2025-present</i></p>
-        </div>
+    <main id="main" style="margin:1vw">
+        <h1 class="sr-only">Peter C-S Projects</h1>
 
-        <p>A raytracer written in Rust, following <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>,
-        with lots that I'd still like to add (see the <a href="https://github.com/peterc-s/rustrace/blob/main/README.md" target="_blank">README</a>).
-        </p>
+        <section aria-label="Projects list">
+            <article aria-labelledby="harper-heading">
+                <div class="project-title">
+                    <h2 id="harper-heading">
+                        <a href="https://github.com/peterc-s/harper" target="_blank" rel="noopener noreferrer">
+                            Harper<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2025" aria-label="2025">
+                            <i aria-hidden="true">2025</i>
+                        </time>
+                    </p>
+                </div>
 
-        <p>It currently differs from the book as lines are rendered in parallel for speed. My
-        design allows for multiple different anti-aliasing techniques (though only two are implented
-        right now, and I may rethink the code structure).
-        </p>
+                <p> A command line tool for analysing HTTP archive (HAR) files, written in rust. Features
+                tools for extracting URLs and sorting them in a domain tree, DNS auditing, checking against
+                common blocklists (Mullvad, EasyPrivacy, AdGuard), and searching.
+                </p>
 
-        <center>
-            <a href="/img/rustrace.jpg">
-                <img src="/img/rustrace.jpg" alt="A raytraced image of a load of different coloured little spheres, with different materials like glass, metal, and matte. There are three larger spheres of the three different materials. All spheres are placed on a matte green ground, with a blue gradient sky." class="image-project"></img>
-            </a>
-        </center>
-        
-        <h3>NOTE:</h3>
-        <p>I built this because of the points in the note for craytrace below.
-        </p>
+                <div class="center">
+                    <a href="/img/harper.jpg" aria-label="Enlarge Harper screenshot">
+                        <img src="/img/harper.jpg" alt="Harper CLI analysis of bbc.co.uk HAR file showing 1 domain in 2 blocklists" class="image-project"></img>
+                    </a>
+                </div>
+            </article>
 
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/craytrace" target="_blank">Raytracer in C</a></h2>
-            <p><i>2025</i></p>
-        </div>
 
-        <p>A very rudimentary raytracer written in C, follows <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
-        up until section 10.
-        </p>
+            <article aria-labelledby="rustrace-heading">
+                <div class="project-title">
+                    <h2 id="rustrace-heading">
+                        <a href="https://github.com/peterc-s/rustrace" target="_blank" rel="noopener noreferrer">
+                            Rustrace<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2025" aria-label="2025 to present">
+                            <i aria-hidden="true">2025-present</i>
+                        </time>
+                    </p>
+                </div>
 
-        <center>
-            <a href="/img/craytrace-sphere.jpg">
-                <img src="/img/craytrace-sphere.jpg" alt="An image of a raytraced matte blueish-gray sphere on top of a very large matte blueish-gray sphere acting as the ground. The background is a nice white to bright blue gradient." class="image-project"></img>
-            </a>
-        </center>
+                <p>A raytracer written in Rust, following <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank" rel="noopener noreferrer">Ray Tracing in One Weekend<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span></a>,
+                with lots that I'd still like to add (see the <a href="https://github.com/peterc-s/rustrace/blob/main/README.md" target="_blank" rel="noopener noreferrer">README<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span></a>).
+                </p>
 
-        <h3>NOTE:</h3>
-        <p>I will likely return to this project after writing a raytracer in a different language, this
-        project hit a wall as early design decisions didn't fully account for future additions. I'll probably
-        rewrite it at some point, implementing metals, dielectrics, camera manipulation, and defocus blur.
-        </p>
+                <p>It currently differs from the book as lines are rendered in parallel for speed. My
+                design allows for multiple different anti-aliasing techniques (though only two are implented
+                right now, and I may rethink the code structure).
+                </p>
 
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/tereminder" target="_blank">Tereminder</a></h2>
-            <p><i>2024-present</i></p>
-        </div>
+                <div class="center">
+                    <a href="/img/rustrace.jpg" aria-label="Enlarge Rustrace screenshot">
+                        <img src="/img/rustrace.jpg" alt="Raytraced scene with colored spheres of different materials on green ground under blue sky" class="image-project"></img>
+                    </a>
+                </div>
 
-        <p>Reminders for the terminal, written in C. Mostly complete, still need to implement
-        recurring reminders and a way to create, delete, and modify reminders without manually
-        modifying the <code>.reminders</code> file that stores reminders.
-        </p>
+                <h3>NOTE:</h3>
+                <p>I built this because of the points in the note for craytrace below.
+                </p>
+            </article>
 
-        <center>
-            <a href="/img/tereminder-1.jpg">
-                <img src="/img/tereminder-1.jpg" alt="A screenshot showing the tereminder software with three reminders that have time until due, severity/importance, a title, and a description." class="image-project"></img>
-            </a>
-        </center>
+            <article aria-labelledby="craytrace-heading">
+                <div class="project-title">
+                    <h2 id="craytrace-heading">
+                        <a href="https://github.com/peterc-s/craytrace" target="_blank" rel="noopener noreferrer">
+                            Raytracer in C<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2025" aria-label="2025">
+                            <i aria-hidden="true">2025</i>
+                        </time>
+                    </p>
+                </div>
 
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/gm-lyric-quiz" target="_blank">George Michael Lyric Quiz</a></h2>
-            <p><i>2024</i></p>
-        </div>
+                <p>A very rudimentary raytracer written in C, follows <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank" rel="noopener noreferrer">Ray Tracing in One Weekend<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span></a>
+                up until section 10.
+                </p>
 
-        <p>As a christmas gift for someone special, I decided to write up a little game
-        with their favourite artist's lyrics. It's written purely in C and uses <a href="https://github.com/nicbarker/clay" target="_blank">Clay</a>
-        for layouting and <a href="https://github.com/raysan5/raylib" target="_blank">raylib</a>
-        for rendering.
-        </p>
+                <div class="center">
+                    <a href="/img/craytrace-sphere.jpg" aria-label="Enlarge C Raytracer screenshot">
+                        <img src="/img/craytrace-sphere.jpg" alt="Raytraced matte sphere on large ground sphere with blue gradient background" class="image-project"></img>
+                    </a>
+                </div>
 
-        <center>
-            <a href="/img/gm-lyric-quiz.jpg">
-                <img src="/img/gm-lyric-quiz.jpg" alt="An image showing the graphical user interface for the George Michael lyric quiz application. It shows the lyrics for Precious Box with 65 words redacted and has an input box to guess the missing words." class="image-project"></img>
-            </a>
-        </center>
+                <h3>NOTE:</h3>
+                <p>I will likely return to this project after writing a raytracer in a different language, this
+                project hit a wall as early design decisions didn't fully account for future additions. I'll probably
+                rewrite it at some point, implementing metals, dielectrics, camera manipulation, and defocus blur.
+                </p>
+            </article>
 
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/bf-interpreter" target="_blank">Brainfuck Interpreter</a></h2>
-            <p><i>2024</i></p>
-        </div>
+            <article aria-labelledby="tereminder-heading">
+                <div class="project-title">
+                    <h2 id="tereminder-heading">
+                        <a href="https://github.com/peterc-s/tereminder" target="_blank" rel="noopener noreferrer">
+                            Tereminder<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2024/P1Y" aria-label="2024 to present">
+                            <i aria-hidden="true">2024-present</i>
+                        </time>
+                    </p>
+                </div>
 
-        <p>After being nerd-sniped by a by a tweet, I went about writing an interpreter for the
-        esoteric programming language <a href="https://en.wikipedia.org/wiki/Brainfuck" target="_blank">Brainfuck</a>.
-        I decided to use C and currently it can be built with the Zig build system or GNU Make with GCC.
-        </p>
+                <p>Reminders for the terminal, written in C. Mostly complete, still need to implement
+                recurring reminders and a way to create, delete, and modify reminders without manually
+                modifying the <code aria-label="Reminders file">.reminders</code> file that stores reminders.
+                </p>
 
-        <p>Memory is dynamically allocated, so if the data pointer attempts to move out of the currently allocated region of data,
-        memory will be reallocated to accomodate.
-        </p>
+                <div class="center">
+                    <a href="/img/tereminder-1.jpg" aria-label="Enlarge Tereminder screenshot">
+                        <img src="/img/tereminder-1.jpg" alt="Tereminder terminal app showing three reminders with details and countdowns" class="image-project"></img>
+                    </a>
+                </div>
+            </article>
 
-        <center>
-            <a href="/img/bf-hello-world.jpg">
-                <img src="/img/bf-hello-world.jpg" alt="A screenshot showing the Hello, World! program written in Brainfuck being interpreted correctly." class="image-project"></img>
-            </a>
-        </center>
+            <article aria-labelledby="gm-quiz-heading">
+                <div class="project-title">
+                    <h2 id="gm-quiz-heading">
+                        <a href="https://github.com/peterc-s/gm-lyric-quiz" target="_blank" rel="noopener noreferrer">
+                            George Michael Lyric Quiz<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2024" aria-label="2024">
+                            <i aria-hidden="true">2024</i>
+                        </time>
+                    </p>
+                </div>
 
-        <p>After a while of no luck debugging, I finally fixed an issue that meant the interpreter was
-        skipping past more <code>]</code> instructions than it should have. So here's some cool
-        programs running:
-        </p>
+                <p>As a christmas gift for someone special, I decided to write up a little game
+                with their favourite artist's lyrics. It's written purely in C and uses <a href="https://github.com/nicbarker/clay" target="_blank" rel="noopener noreferrer">Clay<span aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span></a>
+                for layouting and <a href="https://github.com/raysan5/raylib" target="_blank" rel="noopener noreferrer">raylib<span aria-hidden="true" rel="noopener noreferrer">↗</span><span class="sr-only">(opens in new tab)</span></a>
+                for rendering.
+                </p>
 
-        <center>
-            <a href="/img/bf-complex-examples.jpg">
-                <img src="/img/bf-complex-examples.jpg" alt="A screenshot showing a brainfuck ROT13 working on the interpreter and a Fibonacci sequence working on the interpreter." class="image-project"></img>
-            </a>
-        </center>
+                <div class="center">
+                    <a href="/img/gm-lyric-quiz.jpg" aria-label="Enlarge George Michael lyric quiz screenshot">
+                        <img src="/img/gm-lyric-quiz.jpg" alt="GUI lyric quiz interface with redacted words and input field for guesses" class="image-project"></img>
+                    </a>
+                </div>
+            </article>
 
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/zig-http" target="_blank">HTTP Server in Zig</a></h2>
-            <p><i>2024</i></p>
-        </div>
+            <article aria-labelledby="bf-heading">
+                <div class="project-title">
+                    <h2 id="bf-heading">
+                        <a href="https://github.com/peterc-s/bf-interpreter" target="_blank" rel="noopener noreferrer">
+                            Brainfuck Interpreter<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2024" aria-label="2024">
+                            <i aria-hidden="true">2024</i>
+                        </time>
+                    </p>
+                </div>
 
-        <p>In an attempt to learn the Zig programming language, I decided to create a basic HTTP server.
-        </p>
-        
-        <p>It currently only crudely implements the <code>GET</code> method, but I've been able to locally host
-        this website with it, which is all I really wanted.
-        </p>
+                <p>After being nerd-sniped by a by a tweet, I went about writing an interpreter for the
+                esoteric programming language <a href="https://en.wikipedia.org/wiki/Brainfuck" target="_blank" rel="noopener noreferrer">Brainfuck<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span></a>.
+                I decided to use C and currently it can be built with the Zig build system or GNU Make with GCC.
+                </p>
 
-        <center>
-            <a href="/img/zig-http.jpg">
-                <img src="/img/zig-http.jpg" alt="A screenshot showing the http server I wrote locally hosting this website." class="image-project"></img>
-            </a>
-        </center>
+                <p>Memory is dynamically allocated, so if the data pointer attempts to move out of the currently allocated region of data,
+                memory will be reallocated to accomodate.
+                </p>
 
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/oxalis" target="_blank">Oxalis</a></h2>
-            <p><i>2024-present</i></p>
-        </div>
+                <div class="center">
+                    <a href="/img/bf-hello-world.jpg" aria-label="Enlarge Brainfuck intepreter hello world screenshot">
+                        <img src="/img/bf-hello-world.jpg" alt="Brainfuck 'Hello, World!' program executing successfully in terminal" class="image-project"></img>
+                    </a>
+                </div>
 
-        <p>Oxalis (named after a flower affected by the rust fungi) is [going to be] a real-time
-        renderer written in Rust. This is a project I'm doing alongside a
-        <a href="https://github.com/ThomasMTurner" target="_blank">friend</a>.
-        </p>
+                <p>After a while of no luck debugging, I finally fixed an issue that meant the interpreter was
+                skipping past more <code aria-label="Right bracket Brainfuck instruction">]</code> instructions than it should have. So here's some cool
+                programs running:
+                </p>
 
-        <h3>2024-04-23 - A Triangle!</h3>
-        <p>After following the <a href="https://vulkan-tutorial.com/" target="_blank">Vulkan tutorial</a>
-        I now have a hard-coded triangle written using the <a href="https://github.com/ash-rs/ash" target="_blank">
-        ash</a> Vulkan bindings for Rust, some glsl, and some utility functions and help from
-        <a href="https://github.com/KyleMayes/vulkanalia/" target="_blank">vulkanalia</a>.
-        <center>
-            <a href="/img/first-triangle.jpg">
-                <img src="/img/first-triangle.jpg" alt="A single triangle with colourful shading, known as the 'hello triangle' in graphics." class="image-project"></img>
-            </a>
-        </center>
-        </p>
+                <div class="center">
+                    <a href="/img/bf-complex-examples.jpg" aria-label="Enlarge Brainfuck interpreter ROT13 screenshot">
+                        <img src="/img/bf-complex-examples.jpg" alt="Brainfuck interpreter running ROT13 and Fibonacci programs in terminal" class="image-project"></img>
+                    </a>
+                </div>
+            </article>
 
-        <h3>2024-06-11 - Rewrite</h3>
-        <p>I wasn't sure on the structure of the first attempt and so began a rewrite, though I might
-        sideline this project for a while.
-        </p>
+            <article aria-labelledby="zig-http-heading">
+                <div class="project-title">
+                    <h2 id="zig-http-heading">
+                        <a href="https://github.com/peterc-s/zig-http" target="_blank" rel="noopener noreferrer">
+                            HTTP Server in Zig<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2024" aria-label="2024">
+                            <i aria-hidden="true">2024</i>
+                        </time>
+                    </p>
+                </div>
 
-        <h3>2025-01-28 - Note</h3>
-        <p>I am still planning on getting back around to writing this, but it might be a while as I'm
-        busy with other projects and work.
-        </p>
-        
-        <div class="project-title">
-            <h2><a href="https://github.com/peterc-s/frontier" target="_blank">Frontier</a></h2>
-            <p><i>2024-present</i></p>
-        </div>
-        <p>Frontier is a small Rust command line tool for ease of reproducing installations. It is
-        still WIP (on the back-burner), but currently supports generating a configuration file that
-        lists all user installed packages which can then be installed using Frontier.
-        </p>
-    </div>
+                <p>In an attempt to learn the Zig programming language, I decided to create a basic HTTP server.
+                </p>
+
+                <p>It currently only crudely implements the <code aria-label="HTTP GET method">GET</code> method, but I've been able to locally host
+                this website with it, which is all I really wanted.
+                </p>
+
+                <div class="center">
+                    <a href="/img/zig-http.jpg" aria-label="Enlarge Zig HTTP screenshot">
+                        <img src="/img/zig-http.jpg" alt="Zig HTTP server hosting this website locally" class="image-project"></img>
+                    </a>
+                </div>
+            </article>
+
+            <article aria-labelledby="frontier-heading">
+                <div class="project-title">
+                    <h2 id="frontier-heading">
+                        <a href="https://github.com/peterc-s/frontier" target="_blank" rel="noopener noreferrer">
+                            Frontier<span aria-hidden="true"><sub>↗</sub></span><span class="sr-only">(opens in new tab)</span>
+                        </a>
+                    </h2>
+                    <p>
+                        <time datetime="2024" aria-label="2024">
+                            <i aria-hidden="true">2024</i>
+                        </time>
+                    </p>
+                </div>
+                <p>Frontier is a small Rust command line tool for ease of reproducing installations. It is
+                still WIP (on the back-burner), but currently supports generating a configuration file that
+                lists all user installed packages which can then be installed using Frontier.
+                </p>
+            </article>
+        </section>
+    </main>
 
 </body>
 

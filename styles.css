@@ -1,20 +1,26 @@
+:root {
+    --bg: #2A2E37;
+    --text: #eee;
+    --link: #97C3C3;
+    --code-bg: #1f293a;
+    --img-border: #737373;
+    --nav-bg: #222831;
+
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: #31363f;
+    background-color: var(--bg);
     margin: 0;
     padding: 0;
 }
 
 body *:not(a):not(button):not(input):not(textarea):not(select) {
-    color: #eeeeee;
+    color: var(--text);
 }
 
 a {
-    color: #76ABAE;
-}
-
-p {
-    text-align: justify;
+    color: var(--link);
 }
 
 ul {
@@ -23,12 +29,12 @@ ul {
 
 ul li:before {
     content: "-> ";
-    color: #76ABAE;
+    color: var(--link);
 }
 
 code {
   font-family: "Courier New", Courier, monospace;
-  background-color: #1f293a;
+  background-color: var(--code-bg);
   padding: 2px 4px;
   border-radius: 4px;
 }
@@ -44,7 +50,7 @@ img {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid #737373;
+    border: 2px solid var(--img-border);
 }
 
 @media (min-width: 800px) {
@@ -65,7 +71,7 @@ img {
 .navbar {
     position: -webkit-sticky;
     position: sticky;
-    background-color: #222831;
+    background-color: var(--nav-bg);
     width: 100%;
     margin: 0;
     padding: 0;
@@ -86,7 +92,7 @@ img {
 
 .navbar hr {
     width: 100%;
-    color: #737373;
+    color: var(--img-border);
     padding: 0;
     margin: 0;
 }
@@ -115,4 +121,38 @@ img {
 .project-title p {
     float: left;
     padding-right: 0.5em;
+}
+
+/* screen reader-only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* skip link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* centering */
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
